@@ -1,0 +1,55 @@
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.hero-image {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url("photographer.jpg");
+  display: inline-block;
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  margin: auto;
+}
+
+.overlay-text {
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: rgba(72, 85, 184, 0.325);
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 10px 20px;
+  font-size: 45px;
+  font-style: italic;
+}
+
+.picture-card {
+  border: 2px solid #333333;
+  border-radius: 12px;
+  width: 600px;
+  overflow: hidden;
+  background-color: white;
+  padding: 12px;
+
+}
+
+.picture-card img {
+  width: 100%;
+  display: block;
+  border: 5px solid #0c0c0c
+  box-sizing: border-box;
+}
+
+.picture-card:hover {
+  transition: border-color 0.5s ease;
+
+}
+
+.card-content {
+  padding: 16px;
+}
