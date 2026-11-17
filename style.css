@@ -1,11 +1,14 @@
-body, html {
+body,
+html {
   height: 100%;
   margin: 0;
-  font-family: 'Times New Roman', Times, serif;
+  font-family: "Times New Roman", Times, serif;
 }
 
 .hero-image {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url("photographer.jpg");
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("photographer.jpg");
   display: inline-block;
   height: 100%;
   background-position: center;
@@ -28,6 +31,22 @@ body, html {
   font-style: italic;
 }
 
+.slide-in {
+  animation: slideInFromLeft 0.6s ease-out forwards;
+}
+
+@keyframes slideInFromLeft {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
 .picture-card {
   border: 2px solid #333333;
   border-radius: 12px;
@@ -35,19 +54,17 @@ body, html {
   overflow: hidden;
   background-color: white;
   padding: 12px;
-
 }
 
 .picture-card img {
   width: 100%;
   display: block;
-  border: 5px solid #0c0c0c
+  border: 5px solid #0c0c0c;
   box-sizing: border-box;
 }
 
 .picture-card:hover {
   transition: border-color 0.5s ease;
-
 }
 
 .card-content {
