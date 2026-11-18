@@ -1,72 +1,81 @@
 body,
 html {
-  height: 100%;
+  height: 100vh;
   margin: 0;
   font-family: "Times New Roman", Times, serif;
 }
 
 .hero-image {
-  background-image:
-    linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url("photographer.jpg");
-  display: inline-block;
-  height: 100%;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+ /* background-image:
+    linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);*/
+  height: 100vh;
+  background-size: 400% 400%;
   position: relative;
   margin: auto;
 }
 
-.overlay-text {
-  align-items: center;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: rgba(72, 85, 184, 0.325);
-  background-color: rgba(0, 0, 0, 0.5);
-  padding: 10px 20px;
-  font-size: 45px;
-  font-style: italic;
+@keyframes colorshift {
+  from {background-color: #e73cdc;}
+  to {background-color: #dcb1e6;}
+}
+h1 {
+  animation-name: colorshift;
+  animation-iteration-count: infinite;
+  animation-duration: 3s;
+  animation-delay: 2s;
+  animation-timing-function: linear;
+  animation-direction: alternate;
 }
 
-.slide-in {
-  animation: slideInFromLeft 0.6s ease-out forwards;
-}
-
-@keyframes slideInFromLeft {
-  from {
-    transform: translateX(-100%);
-    opacity: 0;
-  }
-
-  to {
-    transform: translateX(0);
-    opacity: 1;
-  }
-}
-
-.picture-card {
+.product-card {
   border: 2px solid #333333;
   border-radius: 12px;
   width: 600px;
   overflow: hidden;
   background-color: white;
   padding: 12px;
+  margin-bottom: 3rem;
+  margin-left: 1rem;
+  display: block;
 }
 
-.picture-card img {
+.product-card img {
   width: 100%;
   display: block;
-  border: 5px solid #0c0c0c;
+  border: 10px solid #0c0c0c;
   box-sizing: border-box;
 }
 
-.picture-card:hover {
+.product-card:hover {
   transition: border-color 0.5s ease;
+  background-color: rgb(122, 69, 117);
 }
 
 .card-content {
   padding: 16px;
+}
+
+h1 {
+  background-color: 0, 0, 0, 0.5;
+  color: rgb(174, 44, 157);
+  align-items: center;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  transform: translate(-50%, -50%);
+  padding: 10px 20px;
+  font-size: 45px;
+  font-style: italic;
+}
+
+@media screen and (max-width: 992px) {
+  body {
+    background-color: white;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  body {
+    background-color: #dcb1e6;
+  }
 }
